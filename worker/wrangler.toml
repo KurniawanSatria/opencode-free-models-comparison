@@ -7,7 +7,8 @@ compatibility_date = "2026-09-28"
 #   wrangler kv:namespace create BENCH_STATE --preview
 [[kv_namespaces]]
 binding = "BENCH_STATE"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "7d1cec4662ce419d8dc7ce57874bd8b2"
+preview_id = "088b9d33b2e54caab133e87e931cd9cb"
 
 [vars]
 GITHUB_REPO = "KurniawanSatria/opencode-free-models-comparison"
