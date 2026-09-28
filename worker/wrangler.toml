@@ -1,0 +1,16 @@
+name = "opencode-benchmark-trigger"
+main = "src/index.js"
+compatibility_date = "2026-09-28"
+
+# Create once and paste the real id here:
+#   wrangler kv:namespace create BENCH_STATE
+#   wrangler kv:namespace create BENCH_STATE --preview
+[[kv_namespaces]]
+binding = "BENCH_STATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+GITHUB_REPO = "KurniawanSatria/opencode-free-models-comparison"
+
+[triggers]
+crons = ["*/30 * * * *"]
