@@ -1,0 +1,17 @@
+{
+  "name": "opencode-free-models-comparison",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "benchmark": "node scripts/benchmark.mjs",
+    "benchmark:all": "node scripts/benchmark.mjs --all"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@lobehub/icons": "^5.21.0",
+    "@lobehub/icons-static-svg": "^1.95.1"
+  }
+}
