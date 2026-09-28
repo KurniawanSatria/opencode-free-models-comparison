@@ -1,25 +1,3 @@
-/**
- * opencode-benchmark-trigger — Cloudflare Worker
- *
- * Runs the full model benchmark on Cloudflare (GitHub Actions is unavailable
- * while the account is locked): polls the public OpenCode Zen model list,
- * rebuilds all comparison SVGs with shared logic from
- * `scripts/benchmark-core.mjs`, and commits `data/*.svg`, `README.md` and
- * `data/state.json` back to the repo via the GitHub git-database API.
- *
- * - Cron: every 30 min (see wrangler.toml [triggers]).
- * - State: KV `BENCH_STATE`, key `zen:free:v1` (sorted id array + checkedAt).
- * - Commit: needs a repo `contents:write` token in `GITHUB_TOKEN` secret.
- * - Manual: `POST /trigger[?force=1]` with `Authorization: Bearer <TRIGGER_SECRET>`,
- *   `GET /` returns last-check status as JSON.
- *
- * Setup:
- *   wrangler kv:namespace create BENCH_STATE
- *   wrangler secret put GITHUB_TOKEN     # repo contents:write token
- *   wrangler secret put TRIGGER_SECRET  # any random string for manual POST /trigger
- *   wrangler deploy
- */
-
 import {
   fetchZenIds,
   fetchModelsDev,
@@ -100,7 +78,6 @@ async function runPipeline(env, { force = false } = {}) {
   const cacheBuster = Date.now().toString(36);
   const pairs = buildLivePairs(records);
 
-  // 1. render all comparison SVGs + state
   const files = {};
   for (const p of pairs) {
     files[p.file] = renderVsSVG(p.a, p.b, buildRows(p.a, p.b), resolveLobe, dateStr);
@@ -116,7 +93,6 @@ async function runPipeline(env, { force = false } = {}) {
     2
   );
 
-  // 2. current HEAD + README
   const ref = await gh(`${R}/git/ref/heads/main`, env);
   const headSha = ref.object.sha;
   const headCommit = await gh(`${R}/git/commits/${headSha}`, env);
@@ -127,7 +103,6 @@ async function runPipeline(env, { force = false } = {}) {
   const section = buildReadmeSection(pairs, { dateStr, cacheBuster });
   files["README.md"] = spliceReadmeSection(b64decode(readmeJson.content), section);
 
-  // 3. prune SVGs of removed models (paid/retired)
   const treeEntries = [];
   if (removed.length > 0) {
     const fullTree = await gh(`${R}/git/trees/${baseTreeSha}?recursive=1`, env);
@@ -135,7 +110,6 @@ async function runPipeline(env, { force = false } = {}) {
     for (const e of fullTree.tree || []) {
       if (e.type !== "blob" || !e.path.startsWith("data/") || !e.path.endsWith(".svg")) continue;
       const base = e.path.slice(5, -4);
-      // match "<slug>-vs-*" or "*-vs-<slug>" on slug boundaries
       const hit = [...gone].some((id) => {
         const s = String(id).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
         return base.startsWith(`${s}-vs-`) || base.endsWith(`-vs-${s}`);
@@ -144,7 +118,6 @@ async function runPipeline(env, { force = false } = {}) {
     }
   }
 
-  // 4. blobs + tree + commit (skip when tree identical)
   for (const [path, content] of Object.entries(files)) {
     const blob = await gh(`${R}/git/blobs`, env, {
       method: "POST",

@@ -1,27 +1,4 @@
 #!/usr/bin/env node
-/**
- * Model benchmark — OpenCode Zen free models vs HF OpenEvals leaderboard.
- *
- * Sources (all public, no key required):
- *  - OpenCode Zen list (truth for availability): https://opencode.ai/zen/v1/models
- *  - models.dev `opencode` provider (name, context, price, description): https://models.dev/api.json
- *  - HF OpenEvals leaderboard (benchmark scores): https://huggingface.co/datasets/OpenEvals/leaderboard-data/resolve/main/leaderboard.json
- *
- * Behavior (sesuai tujuan):
- *  - state di data/state.json mencatat free-model terakhir terlihat.
- *  - added   = id free baru muncul di Zen  -> generate SVG vs baseline.
- *  - removed = id free hilang dari Zen (paid/retired) -> hapus SVG + hapus section README.
- *  - --all   = (re)generate semua pasangan vs baseline (default saat state kosong).
- *
- * Output:
- *  - data/<a>-vs-<b>.svg
- *  - README.md section di antara <!-- BENCHMARK:START --> ... <!-- BENCHMARK:END -->
- *
- * Run:
- *  node scripts/benchmark.mjs [--all] [--dry-run] [--out=data] [--state=data/state.json] [--readme=README.md]
- *
- * Pure logic lives in ./benchmark-core.mjs (shared with the Cloudflare Worker).
- */
 
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync, rmSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
@@ -53,7 +30,6 @@ const README_PATH = resolve(String(args.readme ?? "README.md"));
 const DO_ALL = Boolean(args.all);
 const DRY_RUN = Boolean(args["dry-run"]);
 
-// ---------------------------------------------------------------- lobe icons (node: read from installed package)
 const __HERE = dirname(fileURLToPath(import.meta.url));
 const LOBE_DIRS = [
   resolve(__HERE, "../node_modules/@lobehub/icons-static-svg/icons"),
@@ -73,19 +49,17 @@ function loadLobeInner(slug) {
         .replaceAll("currentColor", "#fff")
         .trim();
     } catch {
-      // try next dir / fall back to custom art
     }
   }
   return null;
 }
 
-const LOBE_BADGE = new Map(); // slug -> inner markup (cached)
+const LOBE_BADGE = new Map();
 function lobeArt(slug) {
   if (!LOBE_BADGE.has(slug)) LOBE_BADGE.set(slug, loadLobeInner(slug));
   return LOBE_BADGE.get(slug);
 }
 
-// ---------------------------------------------------------------- state + readme
 function loadState() {
   try {
     if (!existsSync(STATE_PATH)) return { updatedAt: null, models: {} };
@@ -109,7 +83,6 @@ function updateReadme(pairs) {
   return section;
 }
 
-// ---------------------------------------------------------------- main
 async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   console.log(`[info] fetching Zen + models.dev + leaderboard...`);
@@ -133,7 +106,6 @@ async function main() {
 
   console.log(`[info] added=${added.join(",") || "-"} removed=${removed.join(",") || "-"}`);
 
-  // prune SVGs for removed (turned paid/retired)
   for (const id of removed) {
     const prefix = `${slug(id)}-vs-`;
     const suffix = `-vs-${slug(id)}.svg`;
@@ -147,15 +119,11 @@ async function main() {
     }
   }
 
-  // decide what to (re)generate:
-  // - first run or --all: every free model vs baseline
-  // - else: only added + models whose baseline pairing file is missing
   let targets;
   if (firstRun || DO_ALL) {
     targets = [...records.values()];
   } else {
     targets = added.map((id) => records.get(id)).filter(Boolean);
-    // repair missing files (e.g. baseline changed)
     for (const rec of records.values()) {
       const base = pickBaseline(rec.id, records);
       if (!base) continue;
@@ -167,7 +135,6 @@ async function main() {
   }
 
   const pairs = [];
-  // full live pair list for README (one row per free model vs its baseline)
   const livePairs = buildLivePairs(records);
 
   for (const rec of targets) {
@@ -184,7 +151,6 @@ async function main() {
     pairs.push({ a: rec, b: base, file: fname });
   }
 
-  // README reflects live state, but skip rewrite when nothing changed (avoid churn)
   const changed = added.length > 0 || removed.length > 0 || targets.length > 0;
   if (changed) {
     const relPairs = livePairs.map((p) => ({ ...p, file: p.file.replace(/^.*data\//, "data/") }));
@@ -214,7 +180,6 @@ async function main() {
     console.log(`[dry-run] no files written`);
   }
 
-  // console table for debug (pengganti console.dir(result) lama)
   console.table(
     [...records.values()].map((r) => ({
       id: r.id,

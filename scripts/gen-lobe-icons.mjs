@@ -11,6 +11,6 @@ for (const s of slugs) {
 }
 writeFileSync(
   "worker/src/lobe-icons.js",
-  `// GENERATED from @lobehub/icons-static-svg (mono variants). Do not edit by hand.\n// Regenerate: node scripts/gen-lobe-icons.mjs\n${Object.entries(out).map(([k, v]) => `export const ${k} = ${JSON.stringify(v)};`).join("\n")}\n\nexport const LOBE_INNERS = {\n${Object.keys(out).map((k) => `  ${k},`).join("\n")}\n};\n`
+  `${Object.entries(out).map(([k, v]) => `export const ${k} = ${JSON.stringify(v)};`).join("\n")}\n\nexport const LOBE_INNERS = {\n${Object.keys(out).map((k) => `  ${k},`).join("\n")}\n};\n`
 );
 console.log("wrote worker/src/lobe-icons.js");

@@ -1,21 +1,8 @@
-/**
- * benchmark-core.mjs — pure logic shared by the Node CLI (scripts/benchmark.mjs)
- * and the Cloudflare Worker (worker/src/index.js).
- *
- * No `node:` imports, no `process`, no filesystem access here — only fetch
- * and pure string building, so the same code runs in both runtimes.
- * Brand glyphs come from @lobehub/icons (see https://lobehub.com/icons/skill.md):
- * each runtime injects a `resolveLobe(slug) => string|null` that returns the
- * inlined mono SVG inner markup (`icons/{slug}.svg`) or null to fall back
- * to the custom marks / initials below.
- */
-
 export const ZEN_API = "https://opencode.ai/zen/v1/models";
 export const MODELS_DEV_API = "https://models.dev/api.json";
 export const HF_LEADERBOARD_URL =
   "https://huggingface.co/datasets/OpenEvals/leaderboard-data/resolve/main/leaderboard.json";
 
-// ---------------------------------------------------------------- fetch
 export async function getJSON(url, headers = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), 30_000);
@@ -28,9 +15,6 @@ export async function getJSON(url, headers = {}) {
   }
 }
 
-// ---------------------------------------------------------------- normalize / match
-// BUG FIX vs skrip debug awal: includes() dua arah tanpa batas panjang
-// menyebabkan false-positive ("muse" match "amusement", id pendek match semua).
 export const normalize = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
 export const stripFree = (id) =>
   String(id ?? "")
@@ -41,20 +25,17 @@ export const stripFree = (id) =>
 export function findLeaderboardEntry(opencodeId, leaderboardModels) {
   const base = normalize(stripFree(opencodeId));
   if (!base || base.length < 4) return null;
-  // 1. exact match on normalized id / name / base
   for (const m of leaderboardModels) {
     const nid = normalize(m.id);
     const nname = normalize(m.name);
     if (nid === base || nname === base) return m;
   }
-  // 2. prefix-aware contains, guarded by min length to avoid false positives
   let best = null;
   for (const m of leaderboardModels) {
     const nid = normalize(m.id);
     const nname = normalize(m.name);
     if (nid.length < 6 && nname.length < 6) continue;
     if (nid.includes(base) || base.includes(nid) || nname.includes(base) || base.includes(nname)) {
-      // prefer longest overlap (most specific)
       const score = Math.max(
         nid.includes(base) ? base.length : 0,
         nname.includes(base) ? base.length : 0
@@ -65,10 +46,7 @@ export function findLeaderboardEntry(opencodeId, leaderboardModels) {
   return best?.m ?? null;
 }
 
-// ---------------------------------------------------------------- sources
 export async function fetchZenIds(authHeaders = {}) {
-  // BUG FIX: Zen /v1/models publik, tanpa auth, dan hanya berisi {id,object,created,owned_by}.
-  // Skrip debug mengira ada m.name / m.context_length -> selalu undefined.
   const j = await getJSON(ZEN_API, authHeaders);
   const data = Array.isArray(j) ? j : j.data;
   if (!Array.isArray(data)) throw new Error("unexpected Zen shape: " + JSON.stringify(j).slice(0, 300));
@@ -83,9 +61,6 @@ export async function fetchModelsDev() {
 }
 
 export async function fetchLeaderboard(authHeaders = {}) {
-  // BUG FIX: endpoint debug .../api/datasets/.../leaderboard tidak ada (404).
-  // Yang benar: resolve/main/leaderboard.json dengan shape {metadata, benchmarks, models[]}.
-  // Field bukan {model_id,value,rank,verified} melainkan {id,name,benchmarks,aggregateScore}.
   try {
     const j = await getJSON(HF_LEADERBOARD_URL, authHeaders);
     if (!Array.isArray(j.models)) throw new Error("leaderboard.models missing");
@@ -96,14 +71,13 @@ export async function fetchLeaderboard(authHeaders = {}) {
   }
 }
 
-// ---------------------------------------------------------------- records
 export const isFreeId = (id) => id === "big-pickle" || String(id).endsWith("-free");
 
 export function buildRecords(zenIds, devModels, lbModels) {
   const zenSet = new Set(zenIds);
   const out = new Map();
   for (const id of zenSet) {
-    if (!isFreeId(id)) continue; // hanya track model free + big-pickle
+    if (!isFreeId(id)) continue;
     const dev = devModels[id] ?? null;
     const hf = findLeaderboardEntry(id, lbModels);
     const costIn = dev?.cost?.input ?? null;
@@ -136,7 +110,6 @@ export function buildRecords(zenIds, devModels, lbModels) {
 export function pickBaseline(selfId, records) {
   const others = [...records.values()].filter((r) => r.id !== selfId);
   if (!others.length) return null;
-  // prefer highest aggregateScore, fallback largest context, fallback name
   others.sort((a, b) => {
     const sa = a.hf?.aggregateScore ?? -1;
     const sb = b.hf?.aggregateScore ?? -1;
@@ -168,7 +141,6 @@ export function buildLivePairs(records) {
   return pairs;
 }
 
-// ---------------------------------------------------------------- SVG
 export const esc = (s) =>
   String(s ?? "")
     .replace(/&/g, "&amp;")
@@ -264,11 +236,8 @@ export function barWidths(row, maxW = 210) {
     const mx = Math.max(aValue, bValue, 1e-9);
     return [(aValue / mx) * maxW, (bValue / mx) * maxW];
   }
-  // lower is better: invert; guard zero-price (free vs free -> tie handled above;
-  // free vs paid: free full bar, paid scaled)
   const mn = Math.min(aValue, bValue);
   if (mn <= 0) {
-    // one side is 0 (free): free gets full, other gets small proportional bar
     const wa = aValue <= 0 ? maxW : Math.max(14, (mn / Math.max(aValue, 1e-9)) * maxW);
     const wb = bValue <= 0 ? maxW : Math.max(14, (mn / Math.max(bValue, 1e-9)) * maxW);
     return [wa, wb];
@@ -285,16 +254,12 @@ export function initials(name) {
     .join("");
 }
 
-// ---------------------------------------------------------------- brand icons
-// Mapping is by id/name/family so future models fall back to initials.
-// No LobeHub icon exists for ling / big-pickle / space-bunny / jev (verified via toc),
-// those keep minimal custom white-on-color marks in the same badge style.
 export const BRAND_DEFS = [
-  { keys: ["deepseek"], bg: "#4D6BFE", lobe: "deepseek" }, // toc DeepSeek
-  { keys: ["muse"], bg: "#1d65c1", lobe: "meta" }, // toc Meta; Muse Spark = Meta family
-  { keys: ["mimo"], bg: "#FF6900", lobe: "xiaomimimo" }, // toc XiaomiMiMo (mono only)
-  { keys: ["longcat"], bg: "#111827", lobe: "longcat" }, // toc color #fff → dark badge for contrast
-  { keys: ["nemotron"], bg: "#74B71B", lobe: "nvidia" }, // toc "Nvidia (Nemotron)"
+  { keys: ["deepseek"], bg: "#4D6BFE", lobe: "deepseek" },
+  { keys: ["muse"], bg: "#1d65c1", lobe: "meta" },
+  { keys: ["mimo"], bg: "#FF6900", lobe: "xiaomimimo" },
+  { keys: ["longcat"], bg: "#111827", lobe: "longcat" },
+  { keys: ["nemotron"], bg: "#74B71B", lobe: "nvidia" },
   {
     keys: ["ling"],
     bg: "#0D9488",
@@ -330,8 +295,6 @@ export function brandBadge(rec, resolveLobe = () => null) {
   if (!b) return `<circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">${esc(initials(rec.name))}</text>`;
   const inner = b.lobe ? resolveLobe(b.lobe) ?? b.art : b.art;
   if (!inner) return `<circle r="21" fill="${b.bg}"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">${esc(initials(rec.name))}</text>`;
-  // LobeHub glyphs are 24x24 full-bleed; scale to ~19px optical size inside r=21 badge.
-  // Custom fallback art uses the same 24 box with built-in padding, keep 1:1.
   const art = b.lobe
     ? `<g transform="translate(-9.6 -9.6) scale(0.8)" fill="#fff">${inner}</g>`
     : `<g transform="translate(-12 -12)">${inner}</g>`;
@@ -359,7 +322,7 @@ export function renderVsSVG(a, b, rows, resolveLobe = () => null, dateStr = new 
     const y = headerH + i * rowH;
     const w = winnerOf(row);
     const [wa, wb] = barWidths(row);
-    const aBarX = 380 - wa; // right-aligned toward center (left side grows leftwards)
+    const aBarX = 380 - wa;
     const aFill = w === "a" ? "url(#gWin)" : "#9aa4b0";
     const bFill = w === "b" ? "url(#gWin)" : "#9aa4b0";
     const aCls = w === "a" ? "bm" : "loser";
@@ -438,14 +401,12 @@ export const slug = (s) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 80) || "model";
 
-// ---------------------------------------------------------------- ranking + readme section
 export function modelStrength(rec) {
   const g = (key) => rec.hf?.benchmarks?.[key]?.score ?? null;
   const swe = g("sweVerified") ?? g("swePro") ?? -1;
   const term = g("terminalBench") ?? -1;
   const agg = rec.hf?.aggregateScore ?? -1;
   const ctx = rec.context ?? -1;
-  // price lower is better; free (0) beats paid; null (unknown) ranks last
   const price = rec.priceAvg == null ? -1e9 : -rec.priceAvg;
   return { agg, swe, term, ctx, price };
 }
@@ -458,7 +419,6 @@ export function compareStrength(a, b) {
   if (sb.term !== sa.term) return sb.term - sa.term;
   if (sb.ctx !== sa.ctx) return sb.ctx - sa.ctx;
   if (sb.price !== sa.price) return sb.price - sa.price;
-  // active beats deprecated, then stable id order
   const st = (r) => (r.status === "deprecated" ? 0 : 1);
   if (st(b) !== st(a)) return st(b) - st(a);
   return a.id.localeCompare(b.id);
@@ -468,7 +428,6 @@ export const README_START = "<!-- BENCHMARK:START -->";
 export const README_END = "<!-- BENCHMARK:END -->";
 
 export function buildReadmeSection(pairs, { dateStr, cacheBuster }) {
-  // Rank: best `a` first so 2 perbandingan paling unggul berada di utama.
   const ranked = [...pairs].sort((p, q) => compareStrength(p.a, q.a));
   const topIds = new Set(ranked.slice(0, 2).map((p) => `${p.a.id}||${p.b.id}`));
   return [
