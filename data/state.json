@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T14:10:37.193Z",
+  "updatedAt": "2026-10-01T18:31:19.067Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -70,6 +70,12 @@
     "nemotron-3.5-lightning-free": {
       "name": "Nemotron 3.5 Lightning Free",
       "context": 262144,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "fledge-alpha-free": {
+      "name": "Fledge Alpha Free",
+      "context": 1048576,
       "priceAvg": 0,
       "status": "active"
     }
