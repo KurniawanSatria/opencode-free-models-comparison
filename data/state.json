@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T18:31:19.067Z",
+  "updatedAt": "2026-10-02T16:31:07.244Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -76,6 +76,12 @@
     "fledge-alpha-free": {
       "name": "Fledge Alpha Free",
       "context": 1048576,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "ling-3.1-flash-free": {
+      "name": "Ling 3.1 Flash Free",
+      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     }
