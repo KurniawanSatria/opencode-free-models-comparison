@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T14:00:24.324Z",
+  "updatedAt": "2026-10-08T17:00:29.595Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -50,9 +50,9 @@
       "status": "active"
     },
     "step-5-preview-free": {
-      "name": "step-5-preview-free",
-      "context": null,
-      "priceAvg": null,
+      "name": "Step 5 Preview Free",
+      "context": 1000000,
+      "priceAvg": 0,
       "status": "active"
     },
     "ling-3.0-flash-fin-free": {
@@ -70,12 +70,6 @@
     "nemotron-3.5-lightning-free": {
       "name": "Nemotron 3.5 Lightning Free",
       "context": 262144,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "fledge-alpha-free": {
-      "name": "Fledge Alpha Free",
-      "context": 1048576,
       "priceAvg": 0,
       "status": "active"
     },
