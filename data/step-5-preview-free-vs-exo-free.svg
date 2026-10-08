@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="506" viewBox="0 0 960 506" role="img" aria-labelledby="t d">
-  <title id="t">Ling 3.0 Flash Fin Free vs Exo Free</title>
-  <desc id="d">Exo Free leads 1 of 5 metrics. Price $0.00 vs $0.00. Context 262K vs 1.0M.</desc>
+  <title id="t">step-5-preview-free vs Exo Free</title>
+  <desc id="d">Exo Free leads 2 of 5 metrics. Price N/A vs $0.00. Context N/A vs 1.0M.</desc>
   <defs>
     <linearGradient id="gWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4aa9ff"/><stop offset="1" stop-color="#0062dd"/></linearGradient>
     <linearGradient id="gLeft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a545f"/><stop offset="1" stop-color="#171c23"/></linearGradient>
@@ -14,11 +14,11 @@
   </defs>
   <g font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
     <g transform="translate(40 50)">
-      <circle r="21" fill="#0D9488"/><g transform="translate(-12 -12)"><path d="M12 3.5 18.5 7v7L12 20.5 5.5 14V7Z" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round"/><path d="M13.2 7.5 9.6 12.5h2.5l-1.1 4.5 3.6-5h-2.5Z" fill="#fff"/></g>
+      <circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">S5</text>
     </g>
-    <text x="88" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">Ling 3.0 Flash Fin Free</text>
-    <text x="88" y="70" class="mute" fill="#59636e" font-size="13">ling · no HF match</text>
-    <rect class="ink" fill="#0D9488" x="88" y="79" width="42" height="3" rx="1.5"/>
+    <text x="88" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">step-5-preview-free</text>
+    <text x="88" y="70" class="mute" fill="#59636e" font-size="13">opencode · no HF match</text>
+    <rect class="ink" fill="#1f2328" x="88" y="79" width="42" height="3" rx="1.5"/>
     <g transform="translate(580 50)">
       <circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">EF</text>
     </g>
@@ -88,15 +88,15 @@
     </g>
     <rect fill="#8892a0" fill-opacity=".2" x="170" y="313" width="210" height="14" rx="7"/>
     <rect fill="#8892a0" fill-opacity=".2" x="580" y="313" width="210" height="14" rx="7"/>
-    <rect class="loser" fill="#9aa4b0" x="170.00" y="313" width="210.00" height="14" rx="7">
-      <animate attributeName="x" values="380;380;170.00" keyTimes="0;.15;1" dur="1.40s" begin="0.480s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+    <rect class="loser" fill="#9aa4b0" x="380.00" y="313" width="0.00" height="14" rx="7">
+      <animate attributeName="x" values="380;380;380.00" keyTimes="0;.15;1" dur="1.40s" begin="0.480s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+      <animate attributeName="width" values="0;0;0.00" keyTimes="0;.15;1" dur="1.40s" begin="0.480s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+    </rect>
+    <rect class="bm" fill="url(#gWin)" x="580" y="313" width="210.00" height="14" rx="7" filter="url(#glowW)">
       <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.40s" begin="0.480s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
-    <rect class="loser" fill="#9aa4b0" x="580" y="313" width="210.00" height="14" rx="7">
-      <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.40s" begin="0.480s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
-    </rect>
-    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.480s" fill="freeze"/><text x="40" y="327" font-size="24" font-weight="800">$0.00</text></g>
-    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.480s" fill="freeze"/><text x="920" y="327" font-size="24" font-weight="800" text-anchor="end">$0.00</text></g>
+    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.480s" fill="freeze"/><text x="40" y="327" font-size="24" font-weight="800">N/A</text></g>
+    <g class="win" fill="#1f2328" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.480s" fill="freeze"/><text x="920" y="327" font-size="24" font-weight="800" text-anchor="end">$0.00</text></g>
     <line stroke="#7b8794" stroke-opacity=".28" x1="64" y1="335" x2="896" y2="335"/>
     <g class="ink" fill="#1f2328" text-anchor="middle" opacity="1">
       <animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".6s" begin="0.590s" fill="freeze"/>
@@ -105,23 +105,23 @@
     </g>
     <rect fill="#8892a0" fill-opacity=".2" x="170" y="369" width="210" height="14" rx="7"/>
     <rect fill="#8892a0" fill-opacity=".2" x="580" y="369" width="210" height="14" rx="7"/>
-    <rect class="loser" fill="#9aa4b0" x="327.50" y="369" width="52.50" height="14" rx="7">
-      <animate attributeName="x" values="380;380;327.50" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
-      <animate attributeName="width" values="0;0;52.50" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+    <rect class="loser" fill="#9aa4b0" x="380.00" y="369" width="0.00" height="14" rx="7">
+      <animate attributeName="x" values="380;380;380.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+      <animate attributeName="width" values="0;0;0.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
     <rect class="bm" fill="url(#gWin)" x="580" y="369" width="210.00" height="14" rx="7" filter="url(#glowW)">
       <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
-    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">262K</text></g>
+    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">N/A</text></g>
     <g class="win" fill="#1f2328" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="920" y="383" font-size="24" font-weight="800" text-anchor="end">1.0M</text></g>
     <line stroke="#7b8794" stroke-opacity=".28" x1="64" y1="391" x2="896" y2="391"/>
     <g class="ink" fill="#1f2328" text-anchor="middle" opacity="1">
-      <text x="480" y="424" font-size="15" font-weight="600">Exo Free leads 1 of 5 metrics.</text>
+      <text x="480" y="424" font-size="15" font-weight="600">Exo Free leads 2 of 5 metrics.</text>
       <text x="480" y="446" font-size="15" font-weight="600">Longer bar means better. Missing scores render as N/A.</text>
     </g>
     <g class="mute" fill="#59636e" text-anchor="middle" opacity="1">
       <text x="480" y="474" font-size="12">Sources: OpenCode Zen availability, models.dev pricing/context, HF OpenEvals leaderboard. Values change as providers update.</text>
-      <text x="480" y="492" font-size="12">Generated 2026-10-08 · ling-3.0-flash-fin-free vs exo-free</text>
+      <text x="480" y="492" font-size="12">Generated 2026-10-08 · step-5-preview-free vs exo-free</text>
     </g>
   </g>
 </svg>

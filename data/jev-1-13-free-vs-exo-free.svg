@@ -121,7 +121,7 @@
     </g>
     <g class="mute" fill="#59636e" text-anchor="middle" opacity="1">
       <text x="480" y="474" font-size="12">Sources: OpenCode Zen availability, models.dev pricing/context, HF OpenEvals leaderboard. Values change as providers update.</text>
-      <text x="480" y="492" font-size="12">Generated 2026-10-07 · jev-1.13-free vs exo-free</text>
+      <text x="480" y="492" font-size="12">Generated 2026-10-08 · jev-1.13-free vs exo-free</text>
     </g>
   </g>
 </svg>
