@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T17:00:29.595Z",
+  "updatedAt": "2026-10-11T18:30:27.916Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -7,21 +7,15 @@
       "priceAvg": 0,
       "status": "active"
     },
-    "jev-1.13-free": {
-      "name": "jev-1.13-free",
-      "context": null,
-      "priceAvg": null,
-      "status": "active"
-    },
-    "exo-free": {
-      "name": "Exo Free",
-      "context": 1048576,
+    "ling-3.1-flash-free": {
+      "name": "Ling 3.1 Flash Free",
+      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     },
-    "muse-spark-1.3-contributor-free": {
-      "name": "Muse Spark 1.3 Free",
-      "context": 1048576,
+    "mimo-v2.6-flash-free": {
+      "name": "MiMo-V2.6-Flash Free",
+      "context": 200000,
       "priceAvg": 0,
       "status": "active"
     },
@@ -31,39 +25,9 @@
       "priceAvg": 0,
       "status": "deprecated"
     },
-    "mimo-v2.6-flash-free": {
-      "name": "MiMo-V2.6-Flash Free",
-      "context": 200000,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "space-bunny-free": {
-      "name": "Space Bunny Free",
+    "muse-spark-1.3-contributor-free": {
+      "name": "Muse Spark 1.3 Free",
       "context": 1048576,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "longcat-2.5-preview-free": {
-      "name": "LongCat 2.5 Preview Free",
-      "context": 1000000,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "step-5-preview-free": {
-      "name": "Step 5 Preview Free",
-      "context": 1000000,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "ling-3.0-flash-fin-free": {
-      "name": "Ling 3.0 Flash Fin Free",
-      "context": 262144,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "nemotron-3-ultra-free": {
-      "name": "Nemotron 3 Ultra Free",
-      "context": 1000000,
       "priceAvg": 0,
       "status": "active"
     },
@@ -73,9 +37,27 @@
       "priceAvg": 0,
       "status": "active"
     },
-    "ling-3.1-flash-free": {
-      "name": "Ling 3.1 Flash Free",
-      "context": 262144,
+    "jev-1.13-free": {
+      "name": "jev-1.13-free",
+      "context": null,
+      "priceAvg": null,
+      "status": "active"
+    },
+    "step-5-preview-free": {
+      "name": "Step 5 Preview Free",
+      "context": 1000000,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "longcat-2.5-preview-free": {
+      "name": "LongCat 2.5 Preview Free",
+      "context": 1000000,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "space-bunny-free": {
+      "name": "Space Bunny Free",
+      "context": 1048576,
       "priceAvg": 0,
       "status": "active"
     }
