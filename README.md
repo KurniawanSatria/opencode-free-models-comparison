@@ -6,20 +6,20 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 
 ## Model benchmarks (OpenCode Zen free)
 
-> Auto-generated 2026-10-11. Each new free model is compared vs the current baseline. Removed/paid models are pruned. Ranked best-first; top 2 pinned as featured.
+> Auto-generated 2026-10-13. Each new free model is compared vs the current baseline. Removed/paid models are pruned. Ranked best-first; top 2 pinned as featured.
 
 ### Featured: top 2 perbandingan paling unggul
 
 #### 1. Muse Spark 1.3 Free vs Muse Spark 1.2 Free ⭐ Top 1
 
 <p align="center">
-  <img src="./data/muse-spark-1-3-contributor-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Muse Spark 1.3 Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/muse-spark-1-3-contributor-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Muse Spark 1.3 Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 #### 2. Space Bunny Free vs Muse Spark 1.2 Free ⭐ Top 2
 
 <p align="center">
-  <img src="./data/space-bunny-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Space Bunny Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/space-bunny-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Space Bunny Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 ### All comparisons (ranked)
@@ -27,7 +27,7 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 ### 1. Muse Spark 1.3 Free vs Muse Spark 1.2 Free ⭐ Top 1
 
 <p align="center">
-  <img src="./data/muse-spark-1-3-contributor-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Muse Spark 1.3 Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/muse-spark-1-3-contributor-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Muse Spark 1.3 Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Muse Spark 1.3 Free | Muse Spark 1.2 Free |
@@ -41,7 +41,7 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 ### 2. Space Bunny Free vs Muse Spark 1.2 Free ⭐ Top 2
 
 <p align="center">
-  <img src="./data/space-bunny-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Space Bunny Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/space-bunny-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Space Bunny Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Space Bunny Free | Muse Spark 1.2 Free |
@@ -55,7 +55,7 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 ### 3. Muse Spark 1.2 Free vs Muse Spark 1.3 Free
 
 <p align="center">
-  <img src="./data/muse-spark-1-2-contributor-free-vs-muse-spark-1-3-contributor-free.svg?v=mv45rx3g" alt="Muse Spark 1.2 Free vs Muse Spark 1.3 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/muse-spark-1-2-contributor-free-vs-muse-spark-1-3-contributor-free.svg?v=mv68sh3a" alt="Muse Spark 1.2 Free vs Muse Spark 1.3 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Muse Spark 1.2 Free | Muse Spark 1.3 Free |
@@ -69,7 +69,7 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 ### 4. LongCat 2.5 Preview Free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/longcat-2-5-preview-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="LongCat 2.5 Preview Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/longcat-2-5-preview-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="LongCat 2.5 Preview Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | LongCat 2.5 Preview Free | Muse Spark 1.2 Free |
@@ -83,7 +83,7 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 ### 5. Step 5 Preview Free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/step-5-preview-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Step 5 Preview Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/step-5-preview-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Step 5 Preview Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Step 5 Preview Free | Muse Spark 1.2 Free |
@@ -94,10 +94,24 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 | Price per 1M tokens | $0.00 | $0.00 |
 | Context window | 1.0M | 1.0M |
 
-### 6. Ling 3.1 Flash Free vs Muse Spark 1.2 Free
+### 6. Cat Jam Free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/ling-3-1-flash-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Ling 3.1 Flash Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/cat-jam-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Cat Jam Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+</p>
+
+| metric | Cat Jam Free | Muse Spark 1.2 Free |
+|---|---|---|
+| Intelligence Index | N/A | N/A |
+| SWE-bench Verified | N/A | N/A |
+| Terminal-Bench | N/A | N/A |
+| Price per 1M tokens | $0.00 | $0.00 |
+| Context window | 262K | 1.0M |
+
+### 7. Ling 3.1 Flash Free vs Muse Spark 1.2 Free
+
+<p align="center">
+  <img src="./data/ling-3-1-flash-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Ling 3.1 Flash Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Ling 3.1 Flash Free | Muse Spark 1.2 Free |
@@ -108,10 +122,10 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 | Price per 1M tokens | $0.00 | $0.00 |
 | Context window | 262K | 1.0M |
 
-### 7. Nemotron 3.5 Lightning Free vs Muse Spark 1.2 Free
+### 8. Nemotron 3.5 Lightning Free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/nemotron-3-5-lightning-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Nemotron 3.5 Lightning Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/nemotron-3-5-lightning-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Nemotron 3.5 Lightning Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Nemotron 3.5 Lightning Free | Muse Spark 1.2 Free |
@@ -122,10 +136,10 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 | Price per 1M tokens | $0.00 | $0.00 |
 | Context window | 262K | 1.0M |
 
-### 8. Big Pickle vs Muse Spark 1.2 Free
+### 9. Big Pickle vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/big-pickle-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="Big Pickle vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/big-pickle-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="Big Pickle vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | Big Pickle | Muse Spark 1.2 Free |
@@ -136,10 +150,10 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 | Price per 1M tokens | $0.00 | $0.00 |
 | Context window | 200K | 1.0M |
 
-### 9. MiMo-V2.6-Flash Free vs Muse Spark 1.2 Free
+### 10. MiMo-V2.6-Flash Free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/mimo-v2-6-flash-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="MiMo-V2.6-Flash Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/mimo-v2-6-flash-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="MiMo-V2.6-Flash Free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | MiMo-V2.6-Flash Free | Muse Spark 1.2 Free |
@@ -150,10 +164,10 @@ Benchmark otomatis model free OpenCode Zen vs leaderboard HF OpenEvals.
 | Price per 1M tokens | $0.00 | $0.00 |
 | Context window | 200K | 1.0M |
 
-### 10. jev-1.13-free vs Muse Spark 1.2 Free
+### 11. jev-1.13-free vs Muse Spark 1.2 Free
 
 <p align="center">
-  <img src="./data/jev-1-13-free-vs-muse-spark-1-2-contributor-free.svg?v=mv45rx3g" alt="jev-1.13-free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
+  <img src="./data/jev-1-13-free-vs-muse-spark-1-2-contributor-free.svg?v=mv68sh3a" alt="jev-1.13-free vs Muse Spark 1.2 Free: intelligence, coding benchmarks, price, and context window" width="100%">
 </p>
 
 | metric | jev-1.13-free | Muse Spark 1.2 Free |
