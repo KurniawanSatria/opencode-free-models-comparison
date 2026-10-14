@@ -1,15 +1,9 @@
 {
-  "updatedAt": "2026-10-13T05:30:25.030Z",
+  "updatedAt": "2026-10-14T14:00:30.726Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
       "context": 200000,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "ling-3.1-flash-free": {
-      "name": "Ling 3.1 Flash Free",
-      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     },
