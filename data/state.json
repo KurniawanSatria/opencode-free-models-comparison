@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T07:30:34.997Z",
+  "updatedAt": "2026-10-15T15:30:35.968Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -31,6 +31,12 @@
       "priceAvg": 0,
       "status": "active"
     },
+    "nemotron-3.5-super-vl-free": {
+      "name": "Nemotron 3.5 Super VL Free",
+      "context": 1048576,
+      "priceAvg": 0,
+      "status": "active"
+    },
     "nemotron-3.5-lightning-free": {
       "name": "Nemotron 3.5 Lightning Free",
       "context": 262144,
@@ -56,9 +62,9 @@
       "status": "active"
     },
     "deepseek-v4.1-flash-free": {
-      "name": "deepseek-v4.1-flash-free",
-      "context": null,
-      "priceAvg": null,
+      "name": "DeepSeek V4.1 Flash Free",
+      "context": 200000,
+      "priceAvg": 0,
       "status": "active"
     },
     "space-bunny-free": {
