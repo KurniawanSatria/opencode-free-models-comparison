@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="506" viewBox="0 0 960 506" role="img" aria-labelledby="t d">
   <title id="t">Cat Jam Free vs Muse Spark 1.2 Free</title>
-  <desc id="d">Muse Spark 1.2 Free leads 1 of 5 metrics. Price $0.00 vs $0.00. Context 262K vs 1.0M.</desc>
+  <desc id="d">Both models tie leads 0 of 5 metrics. Price $0.00 vs $0.00. Context 1.0M vs 1.0M.</desc>
   <defs>
     <linearGradient id="gWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4aa9ff"/><stop offset="1" stop-color="#0062dd"/></linearGradient>
     <linearGradient id="gLeft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a545f"/><stop offset="1" stop-color="#171c23"/></linearGradient>
@@ -105,23 +105,23 @@
     </g>
     <rect fill="#8892a0" fill-opacity=".2" x="170" y="369" width="210" height="14" rx="7"/>
     <rect fill="#8892a0" fill-opacity=".2" x="580" y="369" width="210" height="14" rx="7"/>
-    <rect class="loser" fill="#9aa4b0" x="327.50" y="369" width="52.50" height="14" rx="7">
-      <animate attributeName="x" values="380;380;327.50" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
-      <animate attributeName="width" values="0;0;52.50" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
-    </rect>
-    <rect class="bm" fill="url(#gWin)" x="580" y="369" width="210.00" height="14" rx="7" filter="url(#glowW)">
+    <rect class="loser" fill="#9aa4b0" x="170.00" y="369" width="210.00" height="14" rx="7">
+      <animate attributeName="x" values="380;380;170.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
       <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
-    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">262K</text></g>
-    <g class="win" fill="#1f2328" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="920" y="383" font-size="24" font-weight="800" text-anchor="end">1.0M</text></g>
+    <rect class="loser" fill="#9aa4b0" x="580" y="369" width="210.00" height="14" rx="7">
+      <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+    </rect>
+    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">1.0M</text></g>
+    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="920" y="383" font-size="24" font-weight="800" text-anchor="end">1.0M</text></g>
     <line stroke="#7b8794" stroke-opacity=".28" x1="64" y1="391" x2="896" y2="391"/>
     <g class="ink" fill="#1f2328" text-anchor="middle" opacity="1">
-      <text x="480" y="424" font-size="15" font-weight="600">Muse Spark 1.2 Free leads 1 of 5 metrics.</text>
+      <text x="480" y="424" font-size="15" font-weight="600">Both models tie leads 0 of 5 metrics.</text>
       <text x="480" y="446" font-size="15" font-weight="600">Longer bar means better. Missing scores render as N/A.</text>
     </g>
     <g class="mute" fill="#59636e" text-anchor="middle" opacity="1">
       <text x="480" y="474" font-size="12">Sources: OpenCode Zen availability, models.dev pricing/context, HF OpenEvals leaderboard. Values change as providers update.</text>
-      <text x="480" y="492" font-size="12">Generated 2026-10-15 · cat-jam-free vs muse-spark-1.2-contributor-free</text>
+      <text x="480" y="492" font-size="12">Generated 2026-10-16 · cat-jam-free vs muse-spark-1.2-contributor-free</text>
     </g>
   </g>
 </svg>

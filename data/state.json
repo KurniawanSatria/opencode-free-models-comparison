@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T15:30:35.968Z",
+  "updatedAt": "2026-10-16T00:30:12.921Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -9,7 +9,7 @@
     },
     "cat-jam-free": {
       "name": "Cat Jam Free",
-      "context": 262144,
+      "context": 1048576,
       "priceAvg": 0,
       "status": "active"
     },
@@ -47,12 +47,6 @@
       "name": "jev-1.13-free",
       "context": null,
       "priceAvg": null,
-      "status": "active"
-    },
-    "step-5-preview-free": {
-      "name": "Step 5 Preview Free",
-      "context": 1000000,
-      "priceAvg": 0,
       "status": "active"
     },
     "longcat-2.5-preview-free": {
