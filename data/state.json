@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T00:30:12.921Z",
+  "updatedAt": "2026-10-16T07:00:12.773Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -10,6 +10,12 @@
     "cat-jam-free": {
       "name": "Cat Jam Free",
       "context": 1048576,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "ll-alpha-free": {
+      "name": "LL Alpha Free",
+      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     },
@@ -57,6 +63,12 @@
     },
     "deepseek-v4.1-flash-free": {
       "name": "DeepSeek V4.1 Flash Free",
+      "context": 200000,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "glm-5.3-flash-free": {
+      "name": "GLM-5.3-Flash Free",
       "context": 200000,
       "priceAvg": 0,
       "status": "active"
