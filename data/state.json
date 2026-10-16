@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T14:30:12.776Z",
+  "updatedAt": "2026-10-16T21:30:12.543Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -10,12 +10,6 @@
     "beam-free": {
       "name": "Beam Free",
       "context": 1048576,
-      "priceAvg": 0,
-      "status": "active"
-    },
-    "ll-alpha-free": {
-      "name": "LL Alpha Free",
-      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     },
