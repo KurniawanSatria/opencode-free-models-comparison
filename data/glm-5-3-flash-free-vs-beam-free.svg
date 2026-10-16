@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="506" viewBox="0 0 960 506" role="img" aria-labelledby="t d">
-  <title id="t">LongCat 2.5 Preview Free vs Cat Jam Free</title>
-  <desc id="d">Cat Jam Free leads 1 of 5 metrics. Price $0.00 vs $0.00. Context 1.0M vs 1.0M.</desc>
+  <title id="t">GLM-5.3-Flash Free vs Beam Free</title>
+  <desc id="d">Beam Free leads 1 of 5 metrics. Price $0.00 vs $0.00. Context 200K vs 1.0M.</desc>
   <defs>
     <linearGradient id="gWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4aa9ff"/><stop offset="1" stop-color="#0062dd"/></linearGradient>
     <linearGradient id="gLeft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a545f"/><stop offset="1" stop-color="#171c23"/></linearGradient>
@@ -14,16 +14,16 @@
   </defs>
   <g font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
     <g transform="translate(40 50)">
-      <circle r="21" fill="#111827"/><g transform="translate(-9.6 -9.6) scale(0.8)" fill="#fff"><path clip-rule="evenodd" d="M.507 19.883a.507.507 0 01-.489-.642L4.29 3.745a1.013 1.013 0 011.533-.578l5.622 3.687a1.013 1.013 0 001.11 0L18.2 3.165a1.013 1.013 0 011.532.58l4.25 15.497a.506.506 0 01-.49.64H18.07a6.297 6.297 0 001.53-4.115v-.177a6.09 6.09 0 00-1.513-4.017l-.697-3.495a.438.438 0 00-.694-.266L14.07 9.781a.748.748 0 01-.654.121 5.156 5.156 0 00-2.833 0 .746.746 0 01-.653-.121L7.302 7.81a.435.435 0 00-.688.269l-.675 3.652a5.36 5.36 0 00-1.539 3.76v.333c0 1.474.527 2.9 1.488 4.02l.032.038H.507z"></path><path d="M9.213 16.843h1.52v-3.546h-1.29l-.23 3.546zm5.573 0h-1.52v-3.546h1.29l.23 3.546z"></path></g>
+      <circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">G5</text>
     </g>
-    <text x="88" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">LongCat 2.5 Preview Free</text>
-    <text x="88" y="70" class="mute" fill="#59636e" font-size="13">longcat · no HF match</text>
-    <rect class="ink" fill="#111827" x="88" y="79" width="42" height="3" rx="1.5"/>
+    <text x="88" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">GLM-5.3-Flash Free</text>
+    <text x="88" y="70" class="mute" fill="#59636e" font-size="13">glm-flash · no HF match</text>
+    <rect class="ink" fill="#1f2328" x="88" y="79" width="42" height="3" rx="1.5"/>
     <g transform="translate(580 50)">
-      <circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">CJ</text>
+      <circle r="21" fill="#171c23"/><text y="7" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">BF</text>
     </g>
-    <text x="628" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">Cat Jam Free</text>
-    <text x="628" y="70" class="mute" fill="#59636e" font-size="13">opencode · no HF match</text>
+    <text x="628" y="50" class="ink" fill="#1f2328" font-size="23" font-weight="800">Beam Free</text>
+    <text x="628" y="70" class="mute" fill="#59636e" font-size="13">beam · no HF match</text>
     <rect fill="#0082fb" x="628" y="79" width="42" height="3" rx="1.5"/>
     <g transform="translate(480 49)">
       <circle r="17" fill="#8892a0" fill-opacity=".15" stroke="#8892a0" stroke-opacity=".4"/>
@@ -105,23 +105,23 @@
     </g>
     <rect fill="#8892a0" fill-opacity=".2" x="170" y="369" width="210" height="14" rx="7"/>
     <rect fill="#8892a0" fill-opacity=".2" x="580" y="369" width="210" height="14" rx="7"/>
-    <rect class="loser" fill="#9aa4b0" x="179.73" y="369" width="200.27" height="14" rx="7">
-      <animate attributeName="x" values="380;380;179.73" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
-      <animate attributeName="width" values="0;0;200.27" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+    <rect class="loser" fill="#9aa4b0" x="339.95" y="369" width="40.05" height="14" rx="7">
+      <animate attributeName="x" values="380;380;339.95" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
+      <animate attributeName="width" values="0;0;40.05" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
     <rect class="bm" fill="url(#gWin)" x="580" y="369" width="210.00" height="14" rx="7" filter="url(#glowW)">
       <animate attributeName="width" values="0;0;210.00" keyTimes="0;.15;1" dur="1.55s" begin="0.590s" calcMode="spline" keySplines="0 0 1 1;.2 .75 .25 1" fill="freeze"/>
     </rect>
-    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">1.0M</text></g>
+    <g class="lose" fill="#59636e" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="40" y="383" font-size="24" font-weight="800">200K</text></g>
     <g class="win" fill="#1f2328" opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;.2;1" dur=".8s" begin="0.590s" fill="freeze"/><text x="920" y="383" font-size="24" font-weight="800" text-anchor="end">1.0M</text></g>
     <line stroke="#7b8794" stroke-opacity=".28" x1="64" y1="391" x2="896" y2="391"/>
     <g class="ink" fill="#1f2328" text-anchor="middle" opacity="1">
-      <text x="480" y="424" font-size="15" font-weight="600">Cat Jam Free leads 1 of 5 metrics.</text>
+      <text x="480" y="424" font-size="15" font-weight="600">Beam Free leads 1 of 5 metrics.</text>
       <text x="480" y="446" font-size="15" font-weight="600">Longer bar means better. Missing scores render as N/A.</text>
     </g>
     <g class="mute" fill="#59636e" text-anchor="middle" opacity="1">
       <text x="480" y="474" font-size="12">Sources: OpenCode Zen availability, models.dev pricing/context, HF OpenEvals leaderboard. Values change as providers update.</text>
-      <text x="480" y="492" font-size="12">Generated 2026-10-16 · longcat-2.5-preview-free vs cat-jam-free</text>
+      <text x="480" y="492" font-size="12">Generated 2026-10-16 · glm-5.3-flash-free vs beam-free</text>
     </g>
   </g>
 </svg>

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:00:12.773Z",
+  "updatedAt": "2026-10-16T14:30:12.776Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -7,8 +7,8 @@
       "priceAvg": 0,
       "status": "active"
     },
-    "cat-jam-free": {
-      "name": "Cat Jam Free",
+    "beam-free": {
+      "name": "Beam Free",
       "context": 1048576,
       "priceAvg": 0,
       "status": "active"
