@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T12:00:49.840Z",
+  "updatedAt": "2026-10-19T12:30:49.954Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -55,16 +55,10 @@
       "priceAvg": 0,
       "status": "active"
     },
-    "space-bunny-free": {
-      "name": "Space Bunny Free",
-      "context": 1048576,
-      "priceAvg": 0,
-      "status": "active"
-    },
     "minimax-m3.1-flash-free": {
-      "name": "minimax-m3.1-flash-free",
-      "context": null,
-      "priceAvg": null,
+      "name": "MiniMax M3.1 Flash Free",
+      "context": 1000000,
+      "priceAvg": 0,
       "status": "active"
     }
   }
