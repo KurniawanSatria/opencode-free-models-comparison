@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T12:30:49.954Z",
+  "updatedAt": "2026-10-21T17:30:29.415Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -10,6 +10,12 @@
     "beam-free": {
       "name": "Beam Free",
       "context": 1048576,
+      "priceAvg": 0,
+      "status": "active"
+    },
+    "flint-40b-free": {
+      "name": "Flint 40B Free",
+      "context": 262144,
       "priceAvg": 0,
       "status": "active"
     },
