@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T17:30:29.415Z",
+  "updatedAt": "2026-10-22T00:30:29.382Z",
   "models": {
     "big-pickle": {
       "name": "Big Pickle",
@@ -41,12 +41,6 @@
       "name": "jev-1.13-free",
       "context": null,
       "priceAvg": null,
-      "status": "active"
-    },
-    "longcat-2.5-preview-free": {
-      "name": "LongCat 2.5 Preview Free",
-      "context": 1000000,
-      "priceAvg": 0,
       "status": "active"
     },
     "deepseek-v4.1-flash-free": {
